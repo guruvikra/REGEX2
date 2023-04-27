@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regex</title>
+    <link rel="stylesheet" href="stylr.css">
+</head>
+<body>
+    <div class="container">
+        Validate Number
+    <input type="text" id="inp">
+    <div class="btn">
+    <button type="submit" onclick="tru()">Validate</button>
+    <div id="result"></div>
+    </div>
+</div>
+    <script>
+function tru(){
+        const input=/(\d){10,}/g
+        let num = document.getElementById("inp").value;
+        let le = num.match(input);
+        try{
+            if ( le.toString().length == 10)
+        document.getElementById("result").innerHTML= "true"
+        else
+        document.getElementById("result").innerHTML= "false"
+        }
+        catch(error)
+        {
+        document.getElementById("result").innerHTML= "false"
+        }
+        
+
+}
+        </script>
+</body>
+</html>
